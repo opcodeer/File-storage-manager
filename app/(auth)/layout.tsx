@@ -4,15 +4,16 @@ import Image from "next/image";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex min-h-screen">
-      <section className="hidden w-1/2 items-center justify-center bg-brand p-10 lg:flex xl:w-2/5">
+      <section className="hidden w-1/2 items-center justify-center bg-teal-800 p-10 lg:flex xl:w-2/5">
         <div className="flex max-h-[800px] max-w-[430px] flex-col justify-center space-y-12">
-          <Image
-            src="/assets/icons/logo-full.svg"
-            alt="logo"
-            width={224}
-            height={82}
-            className="h-auto"
-          />
+        <Image
+  src="/assets/icons/FileNest.jpg"
+  alt="logo"
+  width={224}
+  height={82}
+  className="h-auto rounded-full animate-glow"
+/>
+
 
           <div className="space-y-5 text-white">
             <h1 className="h1">Manage your files the best way</h1>

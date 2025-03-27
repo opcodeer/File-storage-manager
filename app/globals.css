@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* ===== TYPOGRAPHY */
+  /* (your existing typography classes) */
+
+  /* ===== HELPER CLASSES */
+  /* (your existing helper classes) */
+
+  /* ===== ANIMATION CLASSES */
+  .animate-glow {
+    @apply animate-[glow_2s_ease-in-out_infinite] !important;
+  }
+
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px rgba(0, 255, 255, 0.4),
+                  0 0 10px rgba(0, 255, 255, 0.3),
+                  0 0 20px rgba(0, 255, 255, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
+                  0 0 30px rgba(0, 255, 255, 0.6),
+                  0 0 40px rgba(0, 255, 255, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(0, 255, 255, 0.4),
+                  0 0 10px rgba(0, 255, 255, 0.3),
+                  0 0 20px rgba(0, 255, 255, 0.2);
+    }
+  }
+}
+
 @layer base {
   * {
     @apply scroll-smooth;
@@ -134,7 +165,7 @@
     @apply mx-auto max-w-7xl px-5;
   }
   .primary-btn {
-    @apply bg-brand hover:bg-brand-100 transition-all rounded-full button !important;
+    @apply bg-teal-700 hover:bg-teal-800 transition-all rounded-full button !important;
   }
   .flex-center {
     @apply flex items-center justify-center;
@@ -161,13 +192,13 @@
     @apply space-y-4 max-w-[95%] sm:w-fit rounded-xl md:rounded-[30px] px-4 md:px-8 py-10 bg-white outline-none !important;
   }
   .shad-submit-btn {
-    @apply bg-brand button hover:bg-brand-100 transition-all rounded-full !important;
+    @apply bg-teal-700 button hover:bg-teal-800 transition-all rounded-full !important;
   }
   .shad-otp {
     @apply w-full flex gap-1 sm:gap-2 justify-between !important;
   }
   .shad-otp-slot {
-    @apply text-[40px] font-medium rounded-xl ring-brand shadow-drop-1 text-brand-100 justify-center flex border-2 border-light-300 size-12 md:size-16 gap-5 !important;
+    @apply text-[40px] font-medium rounded-xl ring-teal-700 shadow-drop-1 text-teal-800 justify-center flex border-2 border-light-300 size-12 md:size-16 gap-5 !important;
   }
 
   .shad-sheet {
@@ -319,14 +350,16 @@
 
   /* Chart */
   .chart {
-    @apply flex items-center rounded-[20px] bg-brand p-5 text-white md:flex-col xl:flex-row !important;
+    @apply flex items-center rounded-[20px] bg-teal-600 p-5 text-white md:flex-col xl:flex-row !important;
   }
   .chart-container {
     @apply mx-auto aspect-square w-[180px] text-white xl:w-[250px] !important;
   }
   .polar-grid {
-    @apply first:fill-white/20 last:fill-brand !important;
+    @apply first:fill-white/30 last:fill-teal-800;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
   }
+  
   .chart-details {
     @apply flex-1 items-start px-3 py-0 sm:px-5 lg:p-3 xl:pr-5 !important;
   }
@@ -432,7 +465,7 @@
   }
 
   .shad-active {
-    @apply bg-brand text-white shadow-drop-2 !important;
+    @apply bg-teal-700 text-white shadow-drop-2 !important;
   }
 
   /* Sort */
