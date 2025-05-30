@@ -12,6 +12,8 @@ interface Props {
   email: string;
 }
 
+// Sidebar component displays the main navigation menu with user info, responsive logo, and navigation links highlighting the active route.
+
 const Sidebar = ({ fullName, avatar, email }: Props) => {
   const pathname = usePathname();
 

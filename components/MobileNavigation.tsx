@@ -25,6 +25,8 @@ interface Props {
   email: string;
 }
 
+// MobileNavigation provides a responsive sidebar menu with user info, navigation links, file upload, and logout functionality.
+
 const MobileNavigation = ({
   $id: ownerId,
   accountId,

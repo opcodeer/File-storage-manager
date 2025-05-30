@@ -32,6 +32,10 @@ const authFormSchema = (formType: FormType) => {
   });
 };
 
+// AuthForm component handles both Sign In and Sign Up forms using react-hook-form and Zod validation.
+// Depending on the `type` prop, it dynamically renders the appropriate fields and triggers either account creation or sign-in.
+// After successful submission, it launches an OTP modal for verification.
+
 const AuthForm = ({ type }: { type: FormType }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");

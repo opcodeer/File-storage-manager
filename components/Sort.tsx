@@ -10,6 +10,8 @@ import {
 import { usePathname, useRouter } from "next/navigation";
 import { sortTypes } from "@/constants";
 
+// Sort component provides a dropdown to select sorting options, updating the URL query parameter to reflect the chosen sort type.
+
 const Sort = () => {
   const path = usePathname();
   const router = useRouter();

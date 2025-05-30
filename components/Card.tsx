@@ -5,6 +5,13 @@ import { convertFileSize } from "@/lib/utils";
 import FormattedDateTime from "@/components/FormattedDateTime";
 import ActionDropdown from "@/components/ActionDropdown";
 
+// Card component displays a single file preview card with the following:
+// - Clickable link to the file (opens in a new tab)
+// - File thumbnail based on type and extension
+// - File size displayed on the top right
+// - Dropdown menu for actions (e.g., delete, rename, etc.)
+// - File metadata including name, creation date, and owner's name
+
 const Card = ({ file }: { file: Models.Document }) => {
   return (
     <Link href={file.url} target="_blank" className="file-card">

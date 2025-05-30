@@ -28,6 +28,11 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
+// Chart component renders a radial bar chart displaying used storage space.
+// - Uses Recharts to visually represent percentage of used storage.
+// - Displays dynamic label at the center showing usage percentage.
+// - Includes styled Card UI with chart, title, and usage summary.
+
 export const Chart = ({ used = 0 }: { used: number }) => {
   const chartData = [{ storage: "used", 10: used, fill: "white" }];
 

@@ -7,6 +7,9 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
+// ImageThumbnail displays a small preview of the file using its type, extension, and URL,
+// along with its name and formatted creation date.
+
 const ImageThumbnail = ({ file }: { file: Models.Document }) => (
   <div className="file-details-thumbnail">
     <Thumbnail type={file.type} extension={file.extension} url={file.url} />
@@ -17,12 +20,19 @@ const ImageThumbnail = ({ file }: { file: Models.Document }) => (
   </div>
 );
 
+// DetailRow renders a label and its corresponding value in a single row,
+// used for displaying metadata like format, size, owner, etc.
+
 const DetailRow = ({ label, value }: { label: string; value: string }) => (
   <div className="flex">
     <p className="file-details-label text-left">{label}</p>
     <p className="file-details-value text-left">{value}</p>
   </div>
 );
+
+
+// FileDetails shows detailed information about a file such as format, size, owner,
+// and last edit time, using ImageThumbnail and DetailRow for structure.
 
 export const FileDetails = ({ file }: { file: Models.Document }) => {
   return (
@@ -43,6 +53,10 @@ interface Props {
   onInputChange: React.Dispatch<React.SetStateAction<string[]>>;
   onRemove: (email: string) => void;
 }
+
+
+// ShareInput provides an interface for sharing the file with users via email.
+// It allows adding emails, displays currently shared users, and allows removal of users.
 
 export const ShareInput = ({ file, onInputChange, onRemove }: Props) => {
   return (

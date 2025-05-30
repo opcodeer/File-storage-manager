@@ -18,6 +18,8 @@ interface Props {
   className?: string;
 }
 
+// FileUploader component enables drag-and-drop file uploads with validation, previews, and upload status handling.
+
 const FileUploader = ({ ownerId, accountId, className }: Props) => {
   const path = usePathname();
   const { toast } = useToast();

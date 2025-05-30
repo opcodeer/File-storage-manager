@@ -10,6 +10,9 @@ import { Models } from "node-appwrite";
 import Thumbnail from "@/components/Thumbnail";
 import FormattedDateTime from "@/components/FormattedDateTime";
 import { useDebounce } from "use-debounce";
+
+// Search component provides a debounced live search input to query files and display matching results with thumbnails and creation dates.
+
 const Search = () => {
   const [query, setQuery] = useState("");
   const searchParams = useSearchParams();

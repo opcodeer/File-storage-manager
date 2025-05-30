@@ -10,6 +10,8 @@ interface Props {
   className?: string;
 }
 
+// Renders an image thumbnail if file is an image (except SVG), otherwise shows an icon based on file type/extension
+
 export const Thumbnail = ({
   type,
   extension,

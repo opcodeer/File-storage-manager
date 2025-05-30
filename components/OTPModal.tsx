@@ -21,6 +21,8 @@ import { Button } from "@/components/ui/button";
 import { verifySecret, sendEmailOTP } from "@/lib/actions/user.actions";
 import { useRouter } from "next/navigation";
 
+// OtpModal displays an OTP input dialog for email verification with support for resending the code.
+
 const OtpModal = ({
   accountId,
   email,

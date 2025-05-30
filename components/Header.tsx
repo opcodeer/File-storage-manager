@@ -5,6 +5,8 @@ import Search from "@/components/Search";
 import FileUploader from "@/components/FileUploader";
 import { signOutUser } from "@/lib/actions/user.actions";
 
+// Header component includes a search bar, file uploader, and sign-out functionality for authenticated users.
+
 const Header = ({
   userId,
   accountId,

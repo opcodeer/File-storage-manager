@@ -31,6 +31,14 @@ import {
 import { usePathname } from "next/navigation";
 import { FileDetails, ShareInput } from "@/components/ActionsModalContent";
 
+
+
+// ActionDropdown is a dropdown menu for performing file actions like rename, share, delete, and view details.
+// It opens a modal dialog based on the selected action and interacts with backend file actions (rename, share, delete).
+// It uses UI components from the ShadCN library and handles loading, input state, and modal management.
+// The component supports async actions and dynamically renders the correct modal content based on the action selected.
+
+
 const ActionDropdown = ({ file }: { file: Models.Document }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
